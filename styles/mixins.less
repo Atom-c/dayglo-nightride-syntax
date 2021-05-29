@@ -1,0 +1,6 @@
+.glowingText(@fontColor, @glowColor, @blur) {
+  color: @fontColor;
+  text-shadow: 0px 0px @blur @glowColor;
+  background: fade(@glowColor, 3%);
+  box-shadow: 0px 0px (@blur * 5) fade(@glowColor, 15%);
+}

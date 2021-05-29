@@ -1,0 +1,224 @@
+atom-text-editor {
+  background-color: #000;
+}
+
+// Encourage Save Messages
+.encourage .message {
+  background: linear-gradient(90deg, orange, cyan, violet);
+  color: black;
+  font-weight: 600;
+  padding: 0 20px 5px 20px;
+}
+
+// bracket line match highlighter (line number matching highlight)
+.line-number.bracket-matcher.bracket-matcher,
+.line-number.cursor-line.cursor-line-no-selection,
+.line-number.cursor-line.cursor-line-no-selection.bracket-matcher,
+.line-number.foldable.cursor-line.cursor-line-no-selection,
+.line-number .cursor-line {
+  color: cyan;
+}
+
+// Pigments Package Fix (pigments package)
+atom-text-editor .pigments-native-background {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+// Some 3D effects
+#atom-perspective() {
+  @viewing-distance: 12in;
+  @rotation: 15deg;
+  .tree-view {
+    transform: translateY(-12vh) matrix() rotateY(@rotation)
+               perspective(@viewing-distance) matrix();
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    transform-origin: left;
+    height: 120%;
+  }
+  body /deep/ atom-text-editor-minimap {
+    transform: perspective(@viewing-distance) rotateY(-@rotation);
+  }
+
+}
+
+#atom-perspective;
+
+.tree-view {
+  transform: translateY(-12vh) perspective(12in) rotateY(22deg);
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+  transform-origin: left;
+  height: 120%;
+}
+
+.tool-panel.tree-view {
+  background: linear-gradient(rgba(0, 0, 0, 0.48) 0%,
+                              rgba(0, 0, 0, 0.95) 35%) 0% 0%,
+              linear-gradient(90deg, rgba(189, 29, 255, 0.85) 5%,
+                                     rgba(152, 255, 152, 0.73) 49.71%),
+  background-size: 300%;
+    width: 120%;
+    border: rgba(255, 0, 0, 0.27) solid 1px;
+}
+
+li.directory.entry.list-nested-item.project-root.expanded {
+  font-size: 12px;
+}
+
+ul.list-inline.tab-bar.inset-panel {
+  padding-left: 0px !important;
+}
+
+.tab-bar .tab:first-of-type {
+  border-left-color: transparent;
+}
+
+.tab-bar .tab, .tab-bar .tab.active {
+  flex: 1 1 0;
+  overflow: hidden;
+}
+
+.tab {
+  min-width: 7em !important;
+  padding-left: 1px;
+  overflow: hidden;
+}
+
+ul.list-inline.tab-bar.inset-panel {
+  width: 6em;
+  overflow: hidden;
+}
+
+.tab-bar .tab, .tab-bar .tab.active {
+  padding-right: 0;
+}
+
+.tab-bar .tab {
+  position: relative;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  height: inherit;
+  font-size: inherit;
+  line-height: 2.5em;
+  color: rgba(168, 168, 168, 0.6);
+  background-color: #141414;
+  box-shadow: inherit;
+  border-left: 1px solid #111111;
+}
+
+tabs-bar tabs-tab .title, .tab-bar .tab {
+  font-size: x-small;
+}
+
+.tab-bar .tab .title {
+  text-align: center;
+  margin: 0 0.66em;
+}
+
+tabs-bar tabs-tab .title, .tab-bar .tab {
+  font-size: small;
+}
+
+ul.list-inline.tab-bar.inset-panel {
+  transform: translateY(-12vh) perspective(12in) rotateY(-22deg);
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+  transform-origin: left;
+  height: 120%;
+}
+
+atom-panel.bottom {
+  border-right: 1px solid #111111;
+  // height: 110px;
+}
+
+.find-and-replace {
+  height: 110px;
+}
+
+// ATOM NOTIFICATIONS => Notifications not so wide, short and stout
+atom-notifications atom-notification.has-detail {
+  width: 15em;
+  margin-right: 105px;
+}
+
+atom-notifications  {
+  transform: perspective(12in) rotateY(-15deg);
+
+  atom-notification {
+    width: 15em;
+    margin-right: 105px;
+    box-shadow: 20px 20px 15px 6px rgba(148, 110, 199, 0.3);
+    transform: none;
+    margin-top: 20px;
+  }
+}
+
+atom-notifications atom-notification.success .close-all.btn {
+  position: fixed;
+  right: 5%;
+  border: 1px solid rgba(31, 81, 48, 0.3);
+  color: rgba(31, 81, 48, 0.6);
+  background-color: rgba(114, 218, 135, 0.6);
+  text-shadow: none;
+}
+
+atom-notifications atom-notification:first-child.has-close .message {
+  padding-right: 0;
+}
+
+.status-bar .status-bar-right .inline-block {
+  margin-left: 0;
+}
+
+status-bar .status-bar-right .inline-block {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+// atom setting:
+
+.settings-view input[type="checkbox"]:active,
+.settings-view input[type="checkbox"]:checked {
+  background-color: #3952d8;
+}
+
+// GITHUB INTEGRATION
+
+.line.github-FilePatchView-line--deleted,
+span.syntax--markup.syntax--removed.syntax--diff,
+span.syntax--meta.syntax--diff.syntax--info.syntax--header.syntax--from-file {
+  background-color: rgba(255, 203, 82, 0.15);
+  border-bottom: none !important;
+}
+
+.line.cursor-line.github-FilePatchView-line--deleted.github-FilePatchView-line--selected {
+  background-color: rgba(255, 203, 82, 0.21);
+}
+
+.line.github-FilePatchView-line--added,
+span.syntax--markup.syntax--added.syntax--diff,
+span.syntax--meta.syntax--diff.syntax--info.syntax--header.syntax--to-file {
+  background-color: rgba(26, 253, 255, 0.15);
+  border-bottom: none !important;
+}
+.line.cursor-line.github-FilePatchView-line--added.github-FilePatchView-line--selected,  {
+  background-color: rgba(26, 253, 255, 0.21);
+}
+
+// IDE
+.gutter[gutter-name=diagnostics-gutter] {
+  width: 0.33em;
+  position: absolute;
+}
+
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-info, .diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-review {
+  color: #35b9da;
+}
+
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-error {
+  color: #ff9bbf;
+}

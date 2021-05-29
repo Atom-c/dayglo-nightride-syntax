@@ -1,0 +1,237 @@
+@import "theme";
+@import "colors";
+@import "syntax-variables";
+@import "mixins";
+@import "file-icons-customizations";
+@import "ruby-customizations";
+@import "rails-customizations";
+@import "sql-customizations";
+@import "js-customizations";
+@import "html-customizations";
+@import "slim-customizations";
+@import "todo-customizations";
+@import "ui-customizations";
+// Comment ui-customizations to remove custom UI elements
+
+atom-text-editor, atom-text-editor {
+  background-color: @color-editor-background;
+  color: @color-editor-color;
+  -webkit-filter: contrast(@contrast);
+  -webkit-filter: saturate(@saturation);
+
+  .invisible-character {
+    color: @color-invisibles;
+  }
+
+  .indent-guide {
+    color: @color-indent-guides;
+  }
+
+  .wrap-guide {
+    color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @color-gutter-background;
+    color: @color-gutter-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @color-gray;
+        text-shadow: 0px 0px @blur @color-gray-glow;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .search-results .syntax--marker .region {
+    background-color: transparent;
+    border: @color-primary;
+  }
+
+  .search-results .syntax--marker.current-result .region {
+    border: @syntax-result-marker-color-selected;
+  }
+}
+
+atom-text-editor.is-focused, atom-text-editor {
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+// FINALLY
+  .selection .region {
+    background-color: fade(@color-primary, 50%);
+  }
+// FINALLY
+  .line-number.cursor-line-no-selection, .line.cursor-line {
+    background-color: #282828;
+  }
+}
+
+.bracket-matcher .region {
+  background: fade(@color-secondary, 5%);
+  border-bottom: 2px solid @color-secondary;
+  z-index: 100;
+}
+
+.syntax--comment {
+  font-style: italic;
+  .glowingText(@color-comments, @color-gray-glow, @blur);
+}
+
+.syntax--string {
+  .glowingText(@color-quartiary, @color-quartiary-glow, @blur);
+}
+
+.syntax--constant.syntax--numeric {
+  .glowingText(@color-special, @color-special-glow, @blur);
+}
+
+.syntax--constant.syntax--character, .syntax--constant.syntax--other {
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--constant.syntax--language {
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--support.syntax--type.syntax--property-name {
+  .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+}
+
+.syntax--support.syntax--constant.syntax--property-value {
+    .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--storage {
+  .glowingText(@color-special, @color-special-glow, @blur);
+}
+
+.syntax--meta.syntax--function-call {
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--support.syntax--function {
+  color: #ADAeB2;
+  text-shadow: 0px 0px @blur rgba(189, 190, 130, @opacity);
+}
+
+.syntax--variable.syntax--other.external-symbol {
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--variable.syntax--language, .syntax--variable.syntax--other {
+  .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+}
+
+.syntax--variable.syntax--parameter {
+  .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+}
+
+.syntax--keyword {
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--type {
+    .glowingText(@color-secondary, @color-secondary-glow, @blur);
+  }
+
+  &.syntax--name.syntax--class {
+    .glowingText(@color-special, @color-special-glow, @blur);
+  }
+
+  &.syntax--name.syntax--structure {
+    .glowingText(@color-quartiary, @color-quartiary-glow, @blur);
+  }
+
+  &.syntax--name.syntax--tag {
+    .glowingText(@color-special, @color-special-glow, @blur);
+  }
+
+  &.syntax--name.syntax--function {
+    .glowingText(@color-secondary, @color-secondary-glow, @blur);
+  }
+
+  &.syntax--name.syntax--function.syntax--io {
+    .glowingText(@color-error, @color-error-glow, @blur);
+  }
+
+  &.syntax--name.syntax--function.syntax--misc {
+    .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+  }
+
+  &.syntax--name.syntax--function.syntax--predicate {
+    .glowingText(@color-quartiary, @color-quartiary-glow, @blur);
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    .glowingText(@color-primary, @color-primary-glow, @blur);
+  }
+}
+
+.syntax--meta.syntax--class, .syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--support.syntax--class {
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--invalid {
+  .glowingText(@color-error, @color-error-glow, @blur);
+}
+
+.syntax--string .syntax--source {
+  font-style: italic;
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--entity.syntax--name.syntax--tag {
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--markup.syntax--heading {
+  font-weight: bold;
+  .glowingText(@color-quartiary, @color-quartiary-glow, @blur);
+}
+
+.syntax--markup.syntax--raw {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.syntax--markup.syntax--italic {
+  font-style: italic;
+  .glowingText(@color-primary, @color-primary-glow, @blur);
+}
+
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--markup.syntax--underline {
+  text-decoration: underline;
+  .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+}
+
+.syntax--variable.syntax--unordered.syntax--list {
+  .glowingText(@color-tertiary, @color-tertiary-glow, @blur);
+}
+
+.syntax--variable.syntax--ordered.syntax--list {
+  .glowingText(@color-secondary, @color-secondary-glow, @blur);
+}
+
+.syntax--gfm {
+  .syntax--link .syntax--entity {
+    text-decoration: underline;
+    .glowingText(@color-primary, @color-primary-glow, @blur);
+  }
+}

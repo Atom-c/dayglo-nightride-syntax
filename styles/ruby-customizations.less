@@ -1,0 +1,171 @@
+.syntax--comment {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(8, 8, 4, 0.52);
+  color: rgba(210, 194, 196, 0.5);
+  text-shadow: 0px 0px 15px rgba(169, 164, 168, 0.9);
+  background: rgba(138, 147, 167, 0.07);
+  box-shadow: 0px 0px 75px rgba(149, 177, 174, 0.15);
+  border: #303030 solid 1px !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+// COMMENT HIGHLIGHTERS
+
+// NOTE
+span.syntax--storage.syntax--type.syntax--class.syntax--note {
+  filter:  hue-rotate( 15deg ) brightness( 1000% );
+}
+
+// OPTIMIZE
+span.syntax--storage.syntax--type.syntax--class.syntax--optimize {
+  filter: hue-rotate( 185deg );
+}
+
+// IDEA
+span.syntax--storage.syntax--type.syntax--class.syntax--idea {
+  filter:  hue-rotate( 172deg ) brightness( 70% );
+}
+
+// TODO
+span.syntax--storage.syntax--type.syntax--class.syntax--todo {
+  filter: hue-rotate( -227deg );
+}
+
+// NB
+span.syntax--storage.syntax--type.syntax--class.syntax--nb {
+  filter: hue-rotate( 90deg );
+}
+
+// COMBAK
+span.syntax--storage.syntax--type.syntax--class.syntax--combak {
+  filter:  hue-rotate( 98deg );
+}
+
+// HACK
+span.syntax--storage.syntax--type.syntax--class.syntax--hack {
+  filter:  hue-rotate( 90deg ) brightness( 60% );
+}
+
+// REVIEW
+span.syntax--storage.syntax--type.syntax--class.syntax--review {
+  filter:  hue-rotate( 15deg ) brightness( 105% );
+}
+
+// QUESTION
+span.syntax--storage.syntax--type.syntax--class.syntax--question {
+  filter:  hue-rotate( 2deg ) brightness( 105% );
+}
+
+// DEBUG
+span.syntax--storage.syntax--type.syntax--class.syntax--debug {
+  filter:  brightness( 70% );
+}
+
+// FIXME
+span.syntax--storage.syntax--type.syntax--class.syntax--fixme {
+  filter: hue-rotate( -31deg );
+}
+
+// BUG
+span.syntax--storage.syntax--type.syntax--class.syntax--bug {
+  filter:  hue-rotate( -70deg ) brightness( 60% );
+}
+
+// XXX
+span.syntax--storage.syntax--type.syntax--class.syntax--xxx {
+  filter: hue-rotate( -70deg );
+}
+
+// CHANGED
+span.syntax--storage.syntax--type.syntax--class.syntax--changed {
+  filter: hue-rotate( -55deg );
+}
+
+// WARNING
+span.syntax--storage.syntax--type.syntax--class.syntax--warning {
+  filter: hue-rotate( -62deg );
+
+  &:after {
+    filter: hue-rotate( 62deg );
+    content: ' 💥🧨';
+  }
+}
+
+// TEMP
+span.syntax--storage.syntax--type.syntax--class.syntax--temp {
+  filter: hue-rotate( 213deg );
+  text-decoration: line-through;
+  text-decoration-style: dotted;
+}
+
+// Make commas more discernable to quick glances
+
+span.syntax--punctuation.syntax--separator.syntax--object.syntax--ruby {
+  color: #cfff77;
+  display: table-cell;
+  padding-left: 3px;
+  max-width: 8.42px !important;
+  min-width: 8.42px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+  text-shadow: 2px 2px 3px rgba(179, 255, 3, 0.68);
+}
+
+.syntax--meta.syntax--function.syntax--method.syntax--with-arguments.syntax--ruby {
+  color: #ede212;
+  text-shadow: 2px 2px 3px rgba(179, 255, 3, 0.68);
+}
+
+.invisible-character {
+  padding: none !important;
+  max-width: none !important;
+  min-width: none !important;
+  min-height: none !important;
+  max-height: none !important;
+  text-shadow: none;
+}
+
+span.syntax--punctuation.syntax--section.syntax--function.syntax--ruby {
+  color: #d4ffcd;
+  padding: 0 1px;
+}
+
+span.syntax--punctuation.syntax--definition.syntax--constant.syntax--ruby {
+  color: #1cc4ff;
+  text-shadow: 0px 0px 15px rgba(28, 196, 255, 0.9);
+  background: rgba(28, 196, 255, 0.03);
+  box-shadow: 0px 0px 75px rgba(28, 196, 255, 0.15);
+  padding: 0 2px;
+}
+
+span.syntax--punctuation.syntax--section.syntax--scope.syntax--begin.syntax--ruby, span.syntax--punctuation.syntax--section.syntax--scope.syntax--end.syntax--ruby {
+  color: #f3a5a7;
+}
+
+span.syntax--punctuation.syntax--definition.syntax--parameters.syntax--ruby {
+  padding: 0 1px;
+  color: #a5f3be;
+}
+
+span.syntax--punctuation.syntax--section.syntax--array.syntax--begin.syntax--ruby, span.syntax--punctuation.syntax--section.syntax--array.syntax--end.syntax--ruby {
+  color: #af8de2;
+  text-shadow: 0px 0px 15px #795bff;
+}
+
+// Change  hue for symbols
+span.syntax--constant.syntax--other.syntax--symbol.syntax--hashkey.syntax--ruby {
+  filter: hue-rotate( 235deg ) brightness( 115% );
+}
+span.syntax--constant.syntax--other.syntax--symbol.syntax--ruby {
+  filter: hue-rotate( 235deg ) brightness( 115% );
+}
+
+// mainly for SQL
+
+span.syntax--string.syntax--unquoted.syntax--heredoc.syntax--ruby {
+  background: none;
+  box-shadow: none;
+}

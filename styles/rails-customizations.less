@@ -1,0 +1,143 @@
+span.syntax--constant.syntax--other.syntax--symbol.syntax--ruby {
+  color: #efbd1a;
+  text-shadow: 0px 0px 15px rgba(239, 189, 26, 0.9);
+  background: rgba(239, 189, 26, 0.03);
+  box-shadow: 0px 0px 75px rgba(239, 189, 26, 0.15);
+}
+
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--begin.syntax--ruby,
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--end.syntax--ruby {
+  color: #efa5c6;
+  text-shadow: 0px 0px 15px rgba(239, 103, 178, 0.9);
+  background: rgba(228, 120, 190, 0.03);
+  box-shadow: 0px 0px 75px rgba(255, 158, 227, 0.15);
+}
+
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--begin.syntax--ruby,
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--end.syntax--ruby {
+  color: #ceefa5;
+  text-shadow: 0px 0px 15px rgba(199, 239, 103, 0.9);
+  background: rgba(196, 228, 120, 0.03);
+  box-shadow: 0px 0px 75px rgba(233, 255, 158, 0.15);
+}
+
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--begin.syntax--ruby {
+  margin-right: 3px;
+}
+
+span.syntax--punctuation.syntax--section.syntax--embedded.syntax--end.syntax--ruby {
+  margin-left: 3px;
+}
+
+// interpolated variables
+.syntax--interpolated .syntax--ruby {
+  span.syntax--source {
+    color: #efa5c6;
+    text-shadow: 0px 0px 15px rgba(239, 103, 178, 0.9);
+    background: rgba(228, 120, 190, 0.03);
+    box-shadow: 0px 0px 75px rgba(255, 158, 227, 0.15);
+  }
+}
+
+span.syntax--support.syntax--class.syntax--ruby {
+  color: rgb(30, 216, 176);
+  text-shadow: 0px 0px 15px rgba(28, 98, 255, 0.9);
+  background: rgba(28, 77, 255, 0.03);
+  box-shadow: 0px 0px 75px rgba(28, 108, 255, 0.15);
+  border-bottom: 1px solid;
+}
+
+span.syntax--punctuation.syntax--separator.syntax--method.syntax--ruby {
+  color: #e2debf;
+}
+
+span.syntax--punctuation.syntax--separator.syntax--namespace.syntax--ruby {
+  color: #d0abd6;
+}
+
+span.syntax--keyword.syntax--other.syntax--special-method.syntax--ruby {
+  border-radius: 0.3em;
+}
+
+// Ruby: block highlight (click `end`, see start line highlighted underglow)
+:host, atom-text-editor, atom-text-editor::shadow {
+  .line-number.ruby-block-highlight {
+    color: yellow;
+    background-color: #262626;
+    border: 1px solid orange;
+    box-sizing: border-box;
+  }
+
+  .highlights {
+    .ruby-block-highlight .region {
+      background: linear-gradient(0deg,
+                                  rgba(167, 106, 106, 1) 5%,
+                                  rgba(167, 106, 106, 0.5) 25%,
+                                  transparent 100%);
+    }
+  }
+}
+// constants / modules
+span.syntax--variable.syntax--other.syntax--constant.syntax--ruby {
+  text-shadow: none;
+  background: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+span.syntax--variable.syntax--other.syntax--block.syntax--ruby {
+  color: #a29bf3;
+  text-shadow: 0px 0px 15px rgba(18, 43, 237, 0.9);
+  background: rgba(18, 71, 237, 0.03);
+  box-shadow: 0px 0px 75px rgba(18, 90, 237, 0.15);
+}
+
+span.syntax--variable.syntax--other.syntax--readwrite.syntax--instance.syntax--ruby {
+  color: #de9ba3;
+  text-shadow: 0px 0px 15px rgba(255, 98, 62, 0.38);
+  background: rgba(249, 137, 123, 0.03);
+  box-shadow: none;
+}
+
+span.syntax--constant.syntax--language.syntax--boolean.syntax--ruby {
+  color: darksalmon;
+  font-weight: bold;
+  text-shadow: none;
+  background: none;
+  box-shadow: none;
+}
+//
+span.syntax--variable.syntax--other.syntax--readwrite.syntax--instance.syntax--ruby {
+  text-shadow: 0px 0px 15px rgba(255, 98, 62, 0.4);
+  font-weight: bold;
+  background: none;
+  box-shadow: none;
+  color: #ffa7b3;
+}
+
+// ||, &&, !
+span.syntax--keyword.syntax--operator.syntax--logical.syntax--ruby {
+  background-color: rgba(255, 99, 71, 0.19);
+  color: #ff0089;
+}
+
+// return
+span.syntax--keyword.syntax--control.syntax--pseudo-method.syntax--ruby {
+  color: #f3f0c1;
+  text-shadow: 0px 0px 15px rgba(140, 220, 106, 0.9);
+  background: rgba(214, 213, 189, 0.03);
+  box-shadow: 0px 0px 75px rgba(220, 216, 144, 0.15);
+  font-style: italic;
+}
+
+// { non_sym_key => val_arrow_color } (and also affects css, maybe js)
+span.syntax--punctuation.syntax--separator.syntax--key-value {
+  color: hotpink;
+}
+
+span.syntax--keyword.syntax--operator.syntax--comparison.syntax--ruby {
+  color: #ffc0f6;
+  text-shadow: 0px 0px 15px rgba(208, 21, 21, 0.9);
+  background: rgba(249, 61, 61, 0.03);
+  box-shadow: 0px 0px 75px rgba(239, 26, 168, 0.1);
+}
