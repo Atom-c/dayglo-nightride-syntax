@@ -6,3 +6,6 @@
 
 ## 0.1.1 - Patch
 * Debug compiling
+
+## 0.1.2 - Patch
+* Fix compiling
